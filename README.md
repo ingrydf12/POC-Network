@@ -25,7 +25,7 @@ void setup() {
 ### 2. Enviar e receber dados
 No draw() do nosso arquivo, setamos funções pra enviar e receber dados do cliente.
 
-```
+```java
 void draw() {
   background(100); // Define o fundo da tela
   
@@ -51,7 +51,8 @@ void draw() {
 ### Exemplo sem adicionais game
 
 <b>Server.pde</b>
-```import processing.net.*;
+```java
+import processing.net.*;
 
 Server server;
 
