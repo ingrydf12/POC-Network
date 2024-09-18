@@ -1,3 +1,6 @@
+/* @ | usando o processing.net
+
+*/
 import processing.net.*;  // importação da biblioteca Network
 
 Server server;
@@ -42,8 +45,9 @@ void draw() {
       if (msg != null) {
         String[] dados = msg.split(",");
         if (dados.length == 3 && dados[0].equals("posicao")) {
-          jogador.x = float(dados[1]);  // Atualiza posição X
-          jogador.y = float(dados[2]);  // Atualiza posição Y
+          //Atualiza as posições
+          jogador.x = float(dados[1]);
+          jogador.y = float(dados[2]); 
           println("Jogador " + i + " posição: (" + jogador.x + ", " + jogador.y + ")"); //DEBUG Update Posição do Player
         }
       }
@@ -56,6 +60,6 @@ void draw() {
   // Desenha os jogadores
   for (Jogador jogador : jogadores) {
     fill(0, 0, 255);
-    ellipse(jogador.x, jogador.y, 20, 20);  // Desenha os jogadores como círculos
+    ellipse(jogador.x, jogador.y, 20, 20);
   }
 }

@@ -1,5 +1,6 @@
 import processing.net.*;
 
+//Client settings
 Client cliente;
 String servidorIP = "127.0.0.1";  // Substitua com o IP do servidor
 float x, y;  // Posição do jogador
@@ -7,8 +8,7 @@ float velocidade = 2;  // Velocidade de movimento
 
 void setup() {
   size(400, 400);
-  cliente = new Client(this, servidorIP, 5204);  // Conecta ao servidor
-  println("Conectando ao servidor...");
+  cliente = new Client(this, servidorIP, 5204);  // Conecta ao servidor -> Client
   
   // Posição inicial no centro
   x = width / 2;
